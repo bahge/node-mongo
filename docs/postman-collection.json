@@ -1,0 +1,235 @@
+{
+	"info": {
+		"_postman_id": "4e0e03f1-b5ae-477e-9885-a0df707f31df",
+		"name": "node-mongo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Livros",
+			"item": [
+				{
+					"name": "Listar livros",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url_base}}{{livros}}",
+							"host": [
+								"{{url_base}}{{livros}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Livros por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url_base}}{{livros}}id",
+							"host": [
+								"{{url_base}}{{livros}}id"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Busca por editora",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"editora\":\"nome da editora\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url_base}}{{livros}}",
+							"host": [
+								"{{url_base}}{{livros}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Novo livro",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"titulo\": \"Nome do livro\",\n    \"autor\": \"id autor\",\n    \"editora\": \"editora\",\n    \"paginas\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url_base}}{{livros}}",
+							"host": [
+								"{{url_base}}{{livros}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar livro",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"titulo\": \"nome do livro\",\n    \"autor\": \"id do autor\",\n    \"editora\": \"editora\",\n    \"paginas\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url_base}}{{livros}}id",
+							"host": [
+								"{{url_base}}{{livros}}id"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Apagar livro",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url_base}}{{livros}}id",
+							"host": [
+								"{{url_base}}{{livros}}id"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Autores",
+			"item": [
+				{
+					"name": "Listar autores",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url_base}}{{autores}}",
+							"host": [
+								"{{url_base}}{{autores}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lista autores por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url_base}}{{autores}}id",
+							"host": [
+								"{{url_base}}{{autores}}id"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Novo autor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\": \"nome\",\n    \"nacionalidade\": \"pais de nascimento\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url_base}}{{autores}}",
+							"host": [
+								"{{url_base}}{{autores}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar autor",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\": \"novo nome\",\n    \"nacionalidade\": \"novo pais de origem\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url_base}}{{autores}}id",
+							"host": [
+								"{{url_base}}{{autores}}id"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Apagar autor",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url_base}}{{autores}}id",
+							"host": [
+								"{{url_base}}{{autores}}id"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Geral",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url_base}}",
+					"host": [
+						"{{url_base}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
